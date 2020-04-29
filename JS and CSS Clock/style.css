@@ -1,0 +1,53 @@
+body {
+  box-sizing: border-box;
+  background: url("./Image/background.jpg");
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.clock {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 5px solid yellow;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hour {
+  position: absolute;
+  width: 35%;
+  height: 3px;
+  right: 50%;
+  background-color: yellow;
+  transform-origin: 100%;
+  transition: all 0.07s;
+  transition-timing-function: cubic-bezier(0.35, 0.07, 0, 2.89);
+  transform: rotate(90deg);
+}
+.min {
+  position: absolute;
+  width: 43%;
+  height: 3px;
+  right: 50%;
+  background-color: yellow;
+  transform-origin: 100%;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.35, 0.07, 0, 2.89);
+  transform: rotate(90deg);
+}
+.sec {
+  position: absolute;
+  width: 47%;
+  height: 3px;
+  right: 50%;
+  background-color: yellow;
+  transform-origin: 100%;
+  transition: all 0.07s;
+  transition-timing-function: cubic-bezier(0.35, 0.07, 0, 2.89);
+  transform: rotate(90deg);
+}
