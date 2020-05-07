@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 }
+      ];
+
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
+
+      // Regular
+      console.log("Hello");
+
+      // Interpolated
+      console.log("asds %s", "do");
+      // Styled
+      console.log("%c poda da dei", "font-size:20px");
+      // warning!
+      console.warn("wow nice waring");
+      // Error :|
+      console.error("Reddish bro");
+      // Info
+      console.info("You have got some nformation");
+      // Testing
+      console.assert(1 === 2, "That is wrong");
+      // clearing
+      console.clear();
+      // Viewing DOM Elements
+      // console.dir(document.querySelector("p"));
+      // Grouping together
+      console.groupCollapsed("New Group");
+      console.log("asds %s", "do");
+      // Styled
+      console.log("%c poda da dei", "font-size:20px");
+      // warning!
+      console.warn("wow nice waring");
+      // Error :|
+      console.error("Reddish bro");
+      // Info
+      console.info("You have got some nformation");
+      // Testing
+      console.assert(1 === 2, "That is wrong");
+      // clearing
+      // Viewing DOM Elements
+      console.dir(document.querySelector("p"));
+      console.groupEnd("New Group");
+
+      // counting
+
+      // timing
+    </script>
+  </body>
+</html>
