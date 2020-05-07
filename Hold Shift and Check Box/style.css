@@ -1,0 +1,36 @@
+html {
+  background-color: #272727;
+  font-family: sans-serif;
+}
+
+.inbox {
+  border: 3px solid goldenrod;
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(255, 255, 25, 0.1);
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #f1f191f1;
+}
+.item p {
+  flex: 1;
+  border-left: 1px solid #f1f191f1;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  font-weight: 200;
+  padding: 20px;
+  margin: 0;
+  transition: all 1s;
+}
+.item input:checked + p {
+  text-decoration: line-through;
+  background: #f9f9f9;
+}
+.item input {
+  margin: 20px;
+}
