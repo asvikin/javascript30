@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KeySequence</title>
+  </head>
+  <body>
+    <script>
+      const pressed = [];
+      window.addEventListener("keyup", e => {
+        const code = "viki";
+        pressed.push(e.key);
+        pressed.splice(-code.length - 1, pressed.length - code.length);
+        if (pressed.join("").includes(code)) {
+          console.log("Ding ding");
+        }
+      });
+    </script>
+  </body>
+</html>
