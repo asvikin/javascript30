@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sort Them</title>
+  </head>
+  <body>
+    <ul id="bands"></ul>
+    <script>
+      const bands = [
+        "The Plot in You",
+        "The Devil Wears Prada",
+        "Pierce the Veil",
+        "Norma Jean",
+        "The Bled",
+        "Say Anything",
+        "The Midway State",
+        "We Came as Romans",
+        "Counterparts",
+        "Oh, Sleeper",
+        "A Skylit Drive",
+        "Anywhere But Here",
+        "An Old Dog"
+      ];
+      const sortedBrand = bands.sort((a, b) => {
+        if (a.startsWith("An ")) a = a.substr(3);
+        else if (a.startsWith("A ")) a = a.substr(2);
+        else if (a.startsWith("The ")) a = a.substr(4);
+        if (b.startsWith("An ")) b = b.substr(3);
+        else if (b.startsWith("A ")) b = b.substr(2);
+        else if (b.startsWith("The ")) b = b.substr(4);
+        return a > b ? 1 : -1;
+      });
+      const ul = document.querySelector("#bands");
+      const html = bands
+        .map(band => {
+          return `
+            <li>
+                ${band}
+            </li>
+          `;
+        })
+        .join("");
+      ul.innerHTML = html;
+    </script>
+  </body>
+</html>
