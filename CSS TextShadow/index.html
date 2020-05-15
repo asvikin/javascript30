@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Css TextShadow</title>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>🔥WOAH!</h1>
+    </div>
+    <script>
+      const hero = document.querySelector(".hero");
+      const h1 = hero.querySelector("h1");
+      function handleShadow(e) {
+        //console.log(e);
+        const { offsetX: x, offsetY: y } = e;
+        const { offsetHeight: h, offsetWidth: w } = e.target;
+        const moveX = (x / h) * 50 - 50 / 2;
+        const moveY = (y / w) * 50 - 50 / 2;
+        h1.style.textShadow = `${-moveX}px ${-moveY}px rgb(0,0,0,0.4) `;
+        console.log(x, y, moveX, moveY);
+      }
+      hero.addEventListener("mousemove", handleShadow);
+    </script>
+  </body>
+</html>
