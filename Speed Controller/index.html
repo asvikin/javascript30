@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Speed Check</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <video
+        class="flex"
+        width="765"
+        height="430"
+        src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"
+        loop
+        controls
+      ></video>
+      <div class="speed">
+        <div class="speed-bar">1×</div>
+      </div>
+    </div>
+    <script>
+      const video = document.querySelector(".flex");
+      const speedBar = document.querySelector(".speed-bar");
+      const speed = document.querySelector(".speed");
+      speed.addEventListener("mousemove", function(e) {
+        const y = e.pageY - this.offsetTop;
+        const percentage = y / this.offsetHeight;
+        speedBar.style.height = percentage * 100 + "%";
+        const min = 0.5;
+        const max = 4;
+        speedBar.textContent =
+          (percentage * (max - min) + min).toFixed(2) + "x";
+        video.playbackRate = (percentage * (max - min) + min).toFixed(2);
+      });
+    </script>
+  </body>
+</html>
